@@ -17,8 +17,8 @@ To write a program to predict the marks scored by a student using the simple lin
 ```
 /*
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: 
-RegisterNumber:  
+Developed by: MANOJ KUMAR S
+RegisterNumber:  212223240082
 */
 ```py
 import pandas as pd
@@ -50,6 +50,19 @@ plt.title("Hours vs Scores(Training set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
+#Graph plot for test data
+plt.scatter(X_test,Y_test,color='black')
+plt.plot(X_train,regressor.predict(X_train),color="red")
+plt.title("Hours vs Scores(Training set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
+plt.show()
+mse=mean_absolute_error(Y_test,Y_pred)
+print('MSE= ',mse)
+mae=mean_absolute_error(Y_test,Y_pred)
+print('MAE= ',mae)
+rmse=np.sqrt(mse)
+print('RMSE= ',rmse)
 ```
 
 ## Output:
